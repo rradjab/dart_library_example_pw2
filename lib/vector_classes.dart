@@ -34,7 +34,7 @@ class Point {
     num a = p1.distanceTo(p2);
     num b = p2.distanceTo(p3);
     num c = p3.distanceTo(p1);
-    num per = ((a + b + c) / 2);
-    return (per * (per - a) * (per - b) * (per - c)).pow(2);
+    num p = ((a + b + c) / 2);
+    return (p * (p - a) * (p - b) * (p - c)).pow(2);
   }
 }
