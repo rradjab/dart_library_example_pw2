@@ -18,7 +18,7 @@ class Point {
     return Point(0, 0, 0);
   }
 
-  factory Point.getPoint(num x, num y, num z) {
+  factory Point.unitVector(num x, num y, num z) {
     num a = (x.pow(2) + y.pow(2) + z.pow(2)).radix(2);
     return Point(x / a, y / a, z / a);
   }

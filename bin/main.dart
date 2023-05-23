@@ -2,11 +2,9 @@ import 'package:dart_library_example_pw2/collection_operations.dart';
 import 'package:dart_library_example_pw2/math_calculations.dart' as math_calc;
 import 'package:dart_library_example_pw2/math_calculations.dart';
 import 'package:dart_library_example_pw2/users_operations.dart';
+import 'package:dart_library_example_pw2/vector_classes.dart';
 
 void main(List<String> arguments) {
-  //так как в практической работе было написано реализовать методы а не
-  //отдельные функции, все функции были реалзиованы внутри класса, таким
-  //образом становясь методами
   var maths = math_calc.DelimetersCalculator(99, 77);
   print('Greatest Common Divisor: ${maths.getGCD()}');
   print('Least Common Multiple: ${maths.getLCM()}');
@@ -35,4 +33,6 @@ void main(List<String> arguments) {
     users.addUser(GeneralUser(mails));
   }
   print(users.usersMailList());
+  var point = Point(0, 1, 2);
+  print(point.distanceTo(Point(1, 2, 0)));
 }
