@@ -20,8 +20,8 @@ void main(List<String> arguments) {
   Iterable<String> words = ['Pen', 'One', 'TWo', 'Pen', 'oNe', 'Pen', 'Two'];
   print('Map with repeating count: ${lists.elementCount(words)}');
   print('Set with number words: ${lists.extractUnicalInts(words)}');
-  print(12.nthDegree(2));
-  print(655.rootOfNthDegree(3));
+  print(12.pow(2));
+  print(655.radix(3));
   List<String> usersMails = [
     'aaa@gmail.com',
     'aaa@mail.ru',
