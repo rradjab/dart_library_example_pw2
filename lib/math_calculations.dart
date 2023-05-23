@@ -84,7 +84,7 @@ num binToDec(num number) {
 }
 
 extension Degree on num {
-  num nthDegree(int degree) {
+  num pow(int degree) {
     int i = 1;
     num l = this;
     while (i < degree) {
@@ -94,21 +94,21 @@ extension Degree on num {
     return l;
   }
 
-  num rootOfNthDegree(int degree) {
+  num radix(int degree) {
     num i = 0;
     try {
       if (this < 0 || degree < 0) {
         throw NegativeNumberError();
       }
       while (i < this) {
-        if (i.nthDegree(degree) >= this) {
+        if (i.pow(degree) >= this) {
           break;
         }
         i++;
       }
-      if (i.nthDegree(degree) > this) {
+      if (i.pow(degree) > this) {
         i--;
-        while (i.nthDegree(degree) < this) {
+        while (i.pow(degree) < this) {
           i += 0.0000001;
         }
       }
