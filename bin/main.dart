@@ -1,5 +1,4 @@
 //import 'dart:io';
-import 'dart:convert';
 import 'package:dart_library_example_pw2/collection_operations.dart';
 import 'package:dart_library_example_pw2/math_calculations.dart' as math_calc;
 import 'package:dart_library_example_pw2/math_calculations.dart';
@@ -38,8 +37,8 @@ void main(List<String> arguments) {
   print(users.usersMailList());
   var point = Point(0, 1, 2);
   print(point.distanceTo(Point(1, 2, 0)));
-  print('97'.codeUnits);
-  print(utf8.decode([97]));
+  // print('97'.codeUnits);
+  // print(utf8.decode([97]));
   var gm = GaussMethod();
   print(gm.main());
 }

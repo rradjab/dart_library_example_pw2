@@ -83,6 +83,16 @@ num binToDec(num number) {
   return n + l;
 }
 
+num mnrmx(int a, int b, [bool min = true]) {
+  return min
+      ? a < b
+          ? a
+          : b
+      : a > b
+          ? a
+          : b;
+}
+
 extension Degree on num {
   num pow(int degree) {
     int i = 1;
