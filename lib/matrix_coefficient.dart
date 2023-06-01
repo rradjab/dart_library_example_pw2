@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'dart:io';
 
+import 'package:dart_library_example_pw2/input_operations.dart';
 import 'package:dart_library_example_pw2/math_calculations.dart';
 
 class GaussMethod {
@@ -12,10 +13,8 @@ class GaussMethod {
   int variables = 0;
 
   Map<String, num?> main() {
-    stdout.write('Type equations count: ');
-    equations = int.tryParse(stdin.readLineSync().toString()) ?? 0;
-    stdout.write('Type variables count: ');
-    variables = int.tryParse(stdin.readLineSync().toString()) ?? 0;
+    equations = getInt('equations count: ');
+    variables = getInt('variables count: ');
     setVariableLetter(variables);
     equationsList = List<List<num>>.generate(
         equations, (index) => List<num>.generate(variables + 1, (index) => 0));
@@ -172,7 +171,7 @@ class GaussMethod {
         }
       }
     }
-
+    //check for compatibility
     for (int i = equations - 1; i >= 0; i--) {
       n = equationsList[i][variables];
       for (int l = variables - 1; l >= 0; l--) {
