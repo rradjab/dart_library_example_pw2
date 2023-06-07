@@ -94,7 +94,7 @@ num mnrmx(int a, int b, [bool min = true]) {
 }
 
 extension Degree on num {
-  num pow(int degree) {
+  num pow(num degree) {
     int i = 1;
     num l = this;
     while (i < degree) {
@@ -104,7 +104,7 @@ extension Degree on num {
     return l;
   }
 
-  num radix(int degree) {
+  num radix(num degree) {
     num i = 0;
     try {
       if (this < 0 || degree < 0) {
@@ -124,8 +124,8 @@ extension Degree on num {
       }
     } on NegativeNumberError {
       print('Error: input number is negative');
-    } catch (e) {
-      print('any other error \n ');
+    } catch (e, s) {
+      print('any other error \n $e \n $s');
     }
     return i;
   }

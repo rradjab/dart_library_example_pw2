@@ -38,6 +38,6 @@ void main(List<String> arguments) {
   print(users.usersMailList());
   var point = Point(0, 1, 2);
   print(point.distanceTo(Point(1, 2, 0)));
-  //print(matrix.GaussMethod().main());
   print(vector.RiemannIntegral().main());
+  //print(matrix.GaussMethod().main());
 }

@@ -13,8 +13,8 @@ class GaussMethod {
   int variables = 0;
 
   Map<String, num?> main() {
-    equations = getInt('equations count: ');
-    variables = getInt('variables count: ');
+    equations = getInt('equations count');
+    variables = getInt('variables count');
     setVariableLetter(variables);
     equationsList = List<List<num>>.generate(
         equations, (index) => List<num>.generate(variables + 1, (index) => 0));
