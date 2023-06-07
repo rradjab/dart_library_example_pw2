@@ -1,4 +1,3 @@
-import 'package:dart_library_example_pw2/input_operations.dart';
 import 'package:dart_library_example_pw2/integral_coefficients.dart' as vector;
 import 'package:dart_library_example_pw2/matrix_coefficient.dart' as matrix;
 import 'package:dart_library_example_pw2/math_calculations.dart' as math;
