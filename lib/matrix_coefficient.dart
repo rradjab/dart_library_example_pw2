@@ -13,6 +13,7 @@ class GaussMethod {
   int variables = 0;
 
   Map<String, num?> main() {
+    print('Gauss method:');
     equations = getInt('equations count');
     variables = getInt('variables count');
     setVariableLetter(variables);
@@ -53,10 +54,15 @@ class GaussMethod {
     } else {
       l = (index + 1) % (variables + 1);
     }
-    stdout.write('Type line($i) ${l == variables + 1 ? 'result' : l} number: ');
+    stdout.write('Line($i) ${l == variables + 1 ? 'result' : 'element $l'}: ');
     String s = stdin.readLineSync().toString().replaceAll(',', '.');
-    equationsList[i - 1][l - 1] = num.tryParse(s) ?? 0;
-    equationsListCalc[i - 1][l - 1] = num.tryParse(s) ?? 0;
+    var n = num.tryParse(s);
+    if (n == null) {
+      print('"$s" is wrong number and replaced by 0');
+      n = 0;
+    }
+    equationsList[i - 1][l - 1] = n;
+    equationsListCalc[i - 1][l - 1] = n;
   }
 
   void setVariableLetter(int length) {

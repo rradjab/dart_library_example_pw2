@@ -7,7 +7,7 @@ class RiemannIntegral {
   num x2 = 0;
   Set<num> breakPoints = {};
   String main() {
-    print('Welcome to integral calculator\n x2\n  ∫f(x)dx\n x1');
+    print('Riemann method:\n x2\n  ∫f(2x^3 + 7)dx\n x1');
     x1 = getNum('x1 value');
     x2 = getNum('x2 value');
     breakPoints.addAll({
@@ -49,12 +49,16 @@ class RiemannIntegral {
 
   bool wrongSequence() {
     bool b = false;
-    breakPoints.reduce((prev, next) {
-      if (prev >= next) {
-        b = true;
-      }
-      return prev;
-    });
+    if (breakPoints.length == 1) {
+      b = true;
+    } else {
+      breakPoints.reduce((prev, next) {
+        if (prev >= next) {
+          b = true;
+        }
+        return prev;
+      });
+    }
 
     return b;
   }
