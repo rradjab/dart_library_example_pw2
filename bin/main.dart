@@ -1,5 +1,6 @@
 import 'package:dart_library_example_pw2/integral_coefficients.dart' as vector;
 import 'package:dart_library_example_pw2/matrix_coefficient.dart' as matrix;
+import 'package:dart_library_example_pw2/number_conversions.dart';
 import 'package:dart_library_example_pw2/math_calculations.dart' as math;
 import 'package:dart_library_example_pw2/collection_operations.dart';
 import 'package:dart_library_example_pw2/math_calculations.dart';
@@ -13,8 +14,10 @@ void main(List<String> arguments) {
   print('Least Common Multiple: ${maths.getLCM()}');
 
   print('\n2:');
-  print('Decimal to Binary: 19.271 = ${math.decToBin(19.271)}');
-  print('Binary to Decimal: 1101.101100001 = ${math.binToDec(1101.101100001)}');
+  var nums = Conversions();
+  print('Dec to Bin: 19.271 = ${nums.decToBin(19.271)}');
+  print(
+      'Bin to Dec: 10011.010001010110 = ${nums.binToDec('10011.010001010110')}');
 
   print('\n3:');
   String enteredByUser = 'aaa 123 12.3 aaa-9 /09 %3';

@@ -3,7 +3,7 @@ class User {
   User(this.email);
 }
 
-class AdminUser extends User with mailServer {
+class AdminUser extends User with MailServer {
   AdminUser(String email) : super(email);
 }
 
@@ -11,7 +11,7 @@ class GeneralUser extends User {
   GeneralUser(String email) : super(email);
 }
 
-mixin mailServer on User {
+mixin MailServer on User {
   String getMailSystem() {
     return email.split('@')[1];
   }
